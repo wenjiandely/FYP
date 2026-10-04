@@ -1,0 +1,1 @@
+symbol,date,return_1d,return_5d,return_20d,lag_return_1d,lag_return_5d,rolling_volatility_5d,rolling_volatility_20d,high_low_range,volume_change_1d,sma_5,sma_20,sma_60,ema_12,ema_26,rsi_14,macd,macd_signal,spy_relative_return,spy_relative_volatility,excess_return_5d,target_return_1d,target_direction_1d

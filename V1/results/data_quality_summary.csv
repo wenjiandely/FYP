@@ -1,0 +1,12 @@
+scope,name,rows,missing_count,unique_count
+column,symbol,5280,0,3
+column,date,5280,0,1760
+column,open,5280,0,5073
+column,high,5280,0,5081
+column,low,5280,0,5105
+column,close,5280,0,5094
+column,adj_close,5280,0,5231
+column,volume,5280,0,5272
+symbol,AAPL,1760,0,1760
+symbol,NVDA,1760,0,1760
+symbol,SPY,1760,0,1760

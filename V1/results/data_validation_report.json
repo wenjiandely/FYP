@@ -1,0 +1,240 @@
+{
+  "passed": true,
+  "errors": [],
+  "checks": [
+    {
+      "check": "required_columns",
+      "passed": true,
+      "expected": [
+        "symbol",
+        "date",
+        "open",
+        "high",
+        "low",
+        "close",
+        "adj_close",
+        "volume"
+      ],
+      "actual": [
+        "symbol",
+        "date",
+        "open",
+        "high",
+        "low",
+        "close",
+        "adj_close",
+        "volume"
+      ],
+      "details": "missing=[]"
+    },
+    {
+      "check": "symbols",
+      "passed": true,
+      "expected": [
+        "AAPL",
+        "NVDA",
+        "SPY"
+      ],
+      "actual": [
+        "AAPL",
+        "NVDA",
+        "SPY"
+      ],
+      "details": "unknown=[]; missing=[]"
+    },
+    {
+      "check": "unique_symbol_date",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": ""
+    },
+    {
+      "check": "valid_dates",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": ""
+    },
+    {
+      "check": "date_order",
+      "passed": true,
+      "expected": "ascending per symbol",
+      "actual": [],
+      "details": ""
+    },
+    {
+      "check": "date_range",
+      "passed": true,
+      "expected": {
+        "min": "2019-01-02",
+        "max": "2025-12-31"
+      },
+      "actual": {
+        "min": "2019-01-02",
+        "max": "2025-12-31"
+      },
+      "details": ""
+    },
+    {
+      "check": "missing_values",
+      "passed": true,
+      "expected": 0,
+      "actual": {
+        "symbol": 0,
+        "date": 0,
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "adj_close": 0,
+        "volume": 0
+      },
+      "details": ""
+    },
+    {
+      "check": "numeric_values",
+      "passed": true,
+      "expected": 0,
+      "actual": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "adj_close": 0,
+        "volume": 0
+      },
+      "details": ""
+    },
+    {
+      "check": "positive_prices",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": ""
+    },
+    {
+      "check": "non_negative_volume",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": ""
+    },
+    {
+      "check": "ohlc_relationships",
+      "passed": true,
+      "expected": 0,
+      "actual": {
+        "high_below_open": 0,
+        "high_below_close": 0,
+        "low_above_open": 0,
+        "low_above_close": 0
+      },
+      "details": ""
+    },
+    {
+      "check": "record_counts",
+      "passed": true,
+      "expected": {
+        "total": 5280,
+        "per_symbol": 1760
+      },
+      "actual": {
+        "total": 5280,
+        "per_symbol": {
+          "AAPL": 1760,
+          "NVDA": 1760,
+          "SPY": 1760
+        }
+      },
+      "details": ""
+    }
+  ],
+  "rows": 5280,
+  "symbols": [
+    "AAPL",
+    "NVDA",
+    "SPY"
+  ],
+  "min_date": "2019-01-02",
+  "max_date": "2025-12-31",
+  "quality_rows": [
+    {
+      "scope": "column",
+      "name": "symbol",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 3
+    },
+    {
+      "scope": "column",
+      "name": "date",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 1760
+    },
+    {
+      "scope": "column",
+      "name": "open",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 5073
+    },
+    {
+      "scope": "column",
+      "name": "high",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 5081
+    },
+    {
+      "scope": "column",
+      "name": "low",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 5105
+    },
+    {
+      "scope": "column",
+      "name": "close",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 5094
+    },
+    {
+      "scope": "column",
+      "name": "adj_close",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 5231
+    },
+    {
+      "scope": "column",
+      "name": "volume",
+      "rows": 5280,
+      "missing_count": 0,
+      "unique_count": 5272
+    },
+    {
+      "scope": "symbol",
+      "name": "AAPL",
+      "rows": 1760,
+      "missing_count": 0,
+      "unique_count": 1760
+    },
+    {
+      "scope": "symbol",
+      "name": "NVDA",
+      "rows": 1760,
+      "missing_count": 0,
+      "unique_count": 1760
+    },
+    {
+      "scope": "symbol",
+      "name": "SPY",
+      "rows": 1760,
+      "missing_count": 0,
+      "unique_count": 1760
+    }
+  ]
+}

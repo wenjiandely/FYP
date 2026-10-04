@@ -1,0 +1,1 @@
+run_id,model,feature_set,target,symbol,train_start,train_end,validation_start,validation_end,test_start,test_end,mae,rmse,directional_accuracy,balanced_accuracy,precision,recall,f1,roc_auc,cumulative_return,annualized_sharpe,max_drawdown,turnover,status,notes

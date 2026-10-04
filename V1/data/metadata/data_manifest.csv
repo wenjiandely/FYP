@@ -1,0 +1,7 @@
+file,source,download_date,period_start,period_end,interval,records,sha256,notes
+data/raw/yahoo_chart_AAPL_20190101_20251231.json,Yahoo Finance Chart API,2026-10-02,2019-01-01,2025-12-31,1d,1760,39d76bb63302deae4a8d8fbd91a42c3edfbd466019bf7beabeba0c146b9ddd62,Raw API response
+data/raw/yahoo_chart_NVDA_20190101_20251231.json,Yahoo Finance Chart API,2026-10-02,2019-01-01,2025-12-31,1d,1760,03abcfa0e21a8420f2679216faac764fcbad87eaee9ce0ec499c6c4be407cd22,Raw API response
+data/raw/yahoo_chart_SPY_20190101_20251231.json,Yahoo Finance Chart API,2026-10-02,2019-01-01,2025-12-31,1d,1760,0b2a6910892f2c7cfdfd1e1fafa6dad80203ba831b45f2748c09149b128f4128,Raw API response
+data/processed/market_data_v1.csv,Derived from Yahoo Finance raw files,2026-10-02,2019-01-02,2025-12-31,1d,5280,b181e2aead703458a1cd7e43d5b800d72579025381e1f67643d75ef4fb37dcd3,Unified long-format market data
+data/processed/features_v1_template.csv,Prepared schema,2026-10-02,,,,,Not yet populated
+results/results_v1_template.csv,Prepared schema,2026-10-02,,,,,Not yet populated

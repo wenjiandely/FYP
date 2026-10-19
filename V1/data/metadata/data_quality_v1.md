@@ -1,20 +1,20 @@
-# V1 数据质量检查记录
+# V1 Price Data Quality Check Record
 
-检查日期：2026-10-02
+Check date: 2026-10-19
 
-| 检查项 | 结果 |
+| Check | Result |
 | --- | --- |
-| 标的数量 | 3 |
-| 标的 | AAPL, NVDA, SPY |
-| 每个标的记录数 | 1,760 |
-| 总记录数 | 5,280 |
-| 最早日期 | 2019-01-02 |
-| 最晚日期 | 2025-12-31 |
-| 必要字段存在 | 是 |
-| 空值/`null` | 0 |
-| 重复键检查 | 通过，运行报告无重复 `symbol + date` |
-| OHLC 业务约束 | 通过 |
-| 复权一致性 | 使用 Yahoo Finance `adj_close`；仍需在模型实验中固定使用规则 |
-| 时区/交易日历 | 日期已按 Yahoo 日线交易记录解析；未扩展独立交易日历 |
+| Number of symbols | 5 |
+| Symbols | AAPL, NVDA, ORCL, QCOM, SPY |
+| Records per symbol | 1,760 |
+| Total records | 8,800 |
+| Earliest date | 2019-01-02 |
+| Latest date | 2025-12-31 |
+| Required fields present | Yes |
+| Missing values / `null` | 0 |
+| Duplicate key check | Passed; no duplicate `symbol + date` rows |
+| OHLC business rules | Passed |
+| Adjustment consistency | Yahoo Finance `adj_close` is used; the rule must remain fixed during model experiments |
+| Time zone / trading calendar | Dates are parsed from Yahoo daily records; no separate trading-calendar package is used |
 
-本记录反映 V1 脚本运行结果，只代表当前 CSV 的结构和基本业务规则检查，不代表已经完成全部金融数据质量审计。
+This record covers structural and basic business-rule checks for the current price CSV. News quality is recorded separately in `news_quality_v1.json`. Neither is a complete financial-data audit.

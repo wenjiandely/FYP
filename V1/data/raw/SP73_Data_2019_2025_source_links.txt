@@ -1,0 +1,17 @@
+SP73 target tickers: AAPL, NVDA, SPY, ORCL, QCOM
+Date range requested: 2019-01-01 through 2025-12-31
+
+Downloaded price data:
+Yahoo Finance chart endpoint (one URL per ticker):
+https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1546300800&period2=1767225600&interval=1d&events=history&includeAdjustedClose=true
+Replace AAPL with NVDA, SPY, ORCL, or QCOM for the other files.
+Documentation: https://ranaroussi.github.io/yfinance/
+
+Downloaded news data:
+Google News RSS search records, queried by ticker/company name and date windows:
+https://news.google.com/
+
+Original recommended FNSPID source (large; not copied in full to the Desktop folder):
+Dataset page: https://huggingface.co/datasets/Zihan1004/FNSPID
+News (large file): https://huggingface.co/datasets/Zihan1004/FNSPID/resolve/main/Stock_news/nasdaq_exteral_data.csv
+FNSPID README: https://github.com/zGeneral/fnspid

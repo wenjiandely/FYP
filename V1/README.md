@@ -1,40 +1,62 @@
-# V1 第一版实验准备包
+# V1 Initial Validation Package
 
-状态：**V1 验证代码已实现并通过完整运行；模型实验尚未开始。**
+Status: **V1 validation code is implemented and has completed a full run; model experiments have not started.**
 
-本目录为 SP73「Handling and Processing Time-Series based Data using Agentic-AI」建立第一版可复现实验资产。当前版本完成了：
+This directory contains the first reproducible experiment assets for SP73, “Handling and Processing Time-Series Data using Agentic AI”. The current version includes:
 
-- 下载并保存 AAPL、NVDA、SPY 的日线行情原始响应；
-- 将原始响应整理为统一 CSV；
-- 建立数据字典、校验哈希、特征文件模板和结果表模板；
-- 建立数据验证、特征、标签、时间切分和一键运行脚本；
-- 添加单元测试和实验 Notebook 骨架；
-- 没有写入任何预测模型训练代码或伪造结果。
+All supervisor-facing documentation and experiment notes in this repository are maintained in English.
 
-详细说明见 [`docs/technical_design_v1.md`](docs/technical_design_v1.md)。
+- A canonical five-symbol daily market-data file for AAPL, NVDA, ORCL, QCOM, and SPY;
+- A normalized Google News RSS records file for the same five symbols;
+- An import script that verifies and re-imports the shared ZIP;
+- A data dictionary, file hashes, feature schema, and result schema;
+- Data validation, feature, label, time-split, and one-command pipeline scripts;
+- Unit tests and an experiment Notebook skeleton;
+- No predictive-model training code and no fabricated model results.
 
-## 运行
+See [`docs/technical_design_v1.md`](docs/technical_design_v1.md) for the detailed technical record.
 
-在已安装依赖的环境中运行：
+## Run
+
+Run the validation pipeline in the prepared environment:
 
 ```bash
 V1/.venv/bin/python V1/scripts/run_v1_validation.py
 ```
 
-运行测试：
+Run the tests:
 
 ```bash
 V1/.venv/bin/pytest V1/tests
 ```
 
-依赖定义在 `requirements.txt`，已安装到 `V1/.venv`。本次完整运行已通过。
+Dependencies are defined in `requirements.txt` and installed in `V1/.venv`. The complete pipeline run has passed.
 
-本次验证结果：`10 passed`；生成 5,280 行特征数据、5,100 行模型可用数据和 5,100 行时间切分数据。
+Validation result: `10 passed`; 8,800 feature rows, 8,500 model-ready rows, and 8,500 time-split rows were generated.
 
-## 当前实现
+## Current Implementation
 
-- `src/data/validate_market_data.py`：字段、日期、数值、OHLC、重复键和记录数检查；
-- `src/features/build_features.py`：收益率、滞后项、波动率、均线、RSI、MACD 和 SPY 相对特征；
-- `src/features/build_labels.py`：次日收益率、方向标签和模型可用行筛选；
-- `src/evaluation/split.py`：2019–2023 训练、2024 验证、2025 测试的固定时间切分；
-- `scripts/run_v1_validation.py`：生成特征、标签、切分、质量报告、统计表和概览图。
+- `src/data/validate_market_data.py`: validates fields, dates, numeric values, OHLC relationships, duplicate keys, and five-symbol record counts;
+- `scripts/import_shared_dataset.py`: imports the shared ZIP and checks split files against the archive's combined files;
+- `src/features/build_features.py`: builds returns, lagged values, volatility, moving averages, RSI, MACD, and SPY-relative features;
+- `src/features/build_labels.py`: builds next-day return and direction labels and removes unusable rows;
+- `src/evaluation/split.py`: applies fixed time splits for 2019–2023 training, 2024 validation, and 2025 testing;
+- `scripts/run_v1_validation.py`: generates features, labels, splits, quality reports, summary tables, and an overview figure.
+
+## Imported shared dataset
+
+The shared archive is imported into the canonical files below:
+
+- `data/processed/market_data_v1.csv`: 8,800 price rows, 1,760 per symbol;
+- `data/processed/news_v1.csv`: 30,902 Google News RSS records;
+- `data/metadata/shared_dataset_import.json`: archive hash, source inventory, and import audit;
+- `data/metadata/news_quality_v1.json`: news completeness and timestamp-quality audit;
+- `data/raw/SP73_Data_2019_2025_source_links.txt`: source links supplied with the archive.
+
+The news file contains article titles and RSS summaries only. It is not the full FNSPID dataset, and no relevance filter has been applied yet. News should be timestamp-aligned and relevance-filtered before model training.
+
+To re-import the archive:
+
+```bash
+V1/.venv/bin/python V1/scripts/import_shared_dataset.py /path/to/SP73_Data_2019_2025_share\(1\).zip
+```

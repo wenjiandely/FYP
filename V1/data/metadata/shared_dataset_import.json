@@ -1,0 +1,94 @@
+{
+  "imported_at_utc": "2026-10-19T01:24:56.558942+00:00",
+  "source_archive_name": "SP73_Data_2019_2025_share(1).zip",
+  "source_archive_sha256": "aa98f6fb2b42009c65606cb58066ac65dad9a69c113b9488ce99b74a44eff8e4",
+  "source_root": "SP73_Data_2019_2025",
+  "price_source": "Yahoo Finance Chart API export included in shared archive",
+  "news_source": "Google News RSS search records included in shared archive",
+  "fnspid_status": "source link recorded only; FNSPID full dataset is not included",
+  "prices": {
+    "rows": 8800,
+    "symbols": [
+      "AAPL",
+      "NVDA",
+      "ORCL",
+      "QCOM",
+      "SPY"
+    ],
+    "rows_by_symbol": {
+      "AAPL": 1760,
+      "NVDA": 1760,
+      "ORCL": 1760,
+      "QCOM": 1760,
+      "SPY": 1760
+    },
+    "min_date": "2019-01-02",
+    "max_date": "2025-12-31",
+    "duplicate_symbol_date": 0,
+    "missing_by_column": {
+      "symbol": 0,
+      "date": 0,
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 0,
+      "adj_close": 0,
+      "volume": 0
+    }
+  },
+  "price_split_file_counts": {
+    "AAPL": 1760,
+    "NVDA": 1760,
+    "ORCL": 1760,
+    "QCOM": 1760,
+    "SPY": 1760
+  },
+  "news": {
+    "rows": 30902,
+    "symbols": [
+      "AAPL",
+      "NVDA",
+      "ORCL",
+      "QCOM",
+      "SPY"
+    ],
+    "rows_by_symbol": {
+      "AAPL": 6973,
+      "NVDA": 8010,
+      "ORCL": 3741,
+      "QCOM": 3839,
+      "SPY": 8339
+    },
+    "min_date": "2019-01-01",
+    "max_date": "2025-12-31",
+    "duplicate_article_id": 0,
+    "missing_by_column": {
+      "article_id": 0,
+      "symbol": 0,
+      "published_at_utc": 0,
+      "published_date_utc": 0,
+      "title": 0,
+      "summary": 0,
+      "source": 0,
+      "source_url": 0,
+      "article_url": 0,
+      "search_query": 0,
+      "source_dataset": 0,
+      "content_scope": 0
+    },
+    "timestamp_exact_midnight_or_23": 30220,
+    "relevance_filter_applied": false
+  },
+  "news_split_file_counts": {
+    "AAPL": 6973,
+    "NVDA": 8010,
+    "ORCL": 3741,
+    "QCOM": 3839,
+    "SPY": 8339
+  },
+  "outputs": {
+    "prices": "data/processed/market_data_v1.csv",
+    "news": "data/processed/news_v1.csv",
+    "source_links": "data/raw/SP73_Data_2019_2025_source_links.txt"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "rows": 30902,
+  "symbols": [
+    "AAPL",
+    "NVDA",
+    "ORCL",
+    "QCOM",
+    "SPY"
+  ],
+  "rows_by_symbol": {
+    "AAPL": 6973,
+    "NVDA": 8010,
+    "ORCL": 3741,
+    "QCOM": 3839,
+    "SPY": 8339
+  },
+  "min_date": "2019-01-01",
+  "max_date": "2025-12-31",
+  "duplicate_article_id": 0,
+  "missing_by_column": {
+    "article_id": 0,
+    "symbol": 0,
+    "published_at_utc": 0,
+    "published_date_utc": 0,
+    "title": 0,
+    "summary": 0,
+    "source": 0,
+    "source_url": 0,
+    "article_url": 0,
+    "search_query": 0,
+    "source_dataset": 0,
+    "content_scope": 0
+  },
+  "timestamp_exact_midnight_or_23": 30220,
+  "relevance_filter_applied": false
+}

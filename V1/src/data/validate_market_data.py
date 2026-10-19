@@ -19,9 +19,9 @@ REQUIRED_COLUMNS = [
     "adj_close",
     "volume",
 ]
-EXPECTED_SYMBOLS = ["AAPL", "NVDA", "SPY"]
+EXPECTED_SYMBOLS = ["AAPL", "NVDA", "ORCL", "QCOM", "SPY"]
 EXPECTED_RECORDS_PER_SYMBOL = 1760
-EXPECTED_TOTAL_RECORDS = 5280
+EXPECTED_TOTAL_RECORDS = 8800
 EXPECTED_MIN_DATE = pd.Timestamp("2019-01-02")
 EXPECTED_MAX_DATE = pd.Timestamp("2025-12-31")
 NUMERIC_COLUMNS = ["open", "high", "low", "close", "adj_close", "volume"]

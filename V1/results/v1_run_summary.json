@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "market_rows": 5280,
-  "feature_rows": 5280,
-  "model_ready_rows": 5100,
-  "split_rows": 5100,
+  "market_rows": 8800,
+  "feature_rows": 8800,
+  "model_ready_rows": 8500,
+  "split_rows": 8500,
   "feature_columns": [
     "return_1d",
     "return_5d",

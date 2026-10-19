@@ -33,11 +33,15 @@
       "expected": [
         "AAPL",
         "NVDA",
+        "ORCL",
+        "QCOM",
         "SPY"
       ],
       "actual": [
         "AAPL",
         "NVDA",
+        "ORCL",
+        "QCOM",
         "SPY"
       ],
       "details": "unknown=[]; missing=[]"
@@ -136,24 +140,28 @@
       "check": "record_counts",
       "passed": true,
       "expected": {
-        "total": 5280,
+        "total": 8800,
         "per_symbol": 1760
       },
       "actual": {
-        "total": 5280,
+        "total": 8800,
         "per_symbol": {
           "AAPL": 1760,
           "NVDA": 1760,
+          "ORCL": 1760,
+          "QCOM": 1760,
           "SPY": 1760
         }
       },
       "details": ""
     }
   ],
-  "rows": 5280,
+  "rows": 8800,
   "symbols": [
     "AAPL",
     "NVDA",
+    "ORCL",
+    "QCOM",
     "SPY"
   ],
   "min_date": "2019-01-02",
@@ -162,58 +170,58 @@
     {
       "scope": "column",
       "name": "symbol",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
-      "unique_count": 3
+      "unique_count": 5
     },
     {
       "scope": "column",
       "name": "date",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
       "unique_count": 1760
     },
     {
       "scope": "column",
       "name": "open",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
-      "unique_count": 5073
+      "unique_count": 7793
     },
     {
       "scope": "column",
       "name": "high",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
-      "unique_count": 5081
+      "unique_count": 7894
     },
     {
       "scope": "column",
       "name": "low",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
-      "unique_count": 5105
+      "unique_count": 7916
     },
     {
       "scope": "column",
       "name": "close",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
-      "unique_count": 5094
+      "unique_count": 7888
     },
     {
       "scope": "column",
       "name": "adj_close",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
-      "unique_count": 5231
+      "unique_count": 8670
     },
     {
       "scope": "column",
       "name": "volume",
-      "rows": 5280,
+      "rows": 8800,
       "missing_count": 0,
-      "unique_count": 5272
+      "unique_count": 8740
     },
     {
       "scope": "symbol",
@@ -225,6 +233,20 @@
     {
       "scope": "symbol",
       "name": "NVDA",
+      "rows": 1760,
+      "missing_count": 0,
+      "unique_count": 1760
+    },
+    {
+      "scope": "symbol",
+      "name": "ORCL",
+      "rows": 1760,
+      "missing_count": 0,
+      "unique_count": 1760
+    },
+    {
+      "scope": "symbol",
+      "name": "QCOM",
       "rows": 1760,
       "missing_count": 0,
       "unique_count": 1760

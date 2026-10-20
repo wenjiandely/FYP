@@ -4,7 +4,9 @@
 - Version: V1
 - Document status: V1 validation-stage record
 - Created: 2026-10-02 (Asia/Shanghai)
-- Current progress: The V1 data-to-feature validation code has been extended to five symbols and fully executed; all 10 unit tests pass; the shared news archive has been imported and audited; model training and Agentic AI have not started.
+- Current progress: The V1 data-to-feature validation code has been extended to five symbols and fully executed; the shared news archive has been imported and audited; exploratory ARIMA/XGBoost V1/V2/V3 runs have since been completed. The final project forecast contract and Agentic AI implementation remain in progress.
+
+> Scope note: This document records the original V1 data pipeline. For the current project-level five-session path and mean-price forecast contract, aligned model protocol, Agent architecture, and work plan, see [`../../docs/project_scope_v2.md`](../../docs/project_scope_v2.md). The model experiments described before that amendment are exploratory and are not the final aligned comparison.
 
 ## 1. V1 Scope and Boundaries
 
@@ -141,6 +143,8 @@ The SPY reference is joined by date before relative features are calculated. No 
 
 The final row of each symbol has no next-day label and is removed from `model_ready_v1.csv`.
 
+These are the V1 data-pipeline labels only. They do not define the final model experiment target. The current project target is five daily future returns, a reconstructed five-session adjusted-close path, and the mean adjusted close over those five sessions; see the project scope amendment.
+
 ## 6. Implemented Code Structure
 
 ```text
@@ -171,7 +175,9 @@ V1/.venv/bin/python V1/scripts/run_v1_validation.py
 
 The command validates the raw data, builds features and labels, removes unusable rows, assigns fixed time splits, and writes reports, summaries, and a feature overview figure.
 
-## 7. Future Training Design
+## 7. Original Provisional Training Design
+
+This section records the initial proposal and is superseded for current experiments by `docs/project_scope_v2.md`.
 
 ### 7.1 Baseline order
 
@@ -234,8 +240,9 @@ Planned ablation groups are:
 | 2026-10-02 | Created the V1 virtual environment | Completed | `V1/.venv/` is not version-controlled |
 | 2026-10-19 | Installed dependencies and ran the complete pipeline | Completed | 8,800 feature rows; 8,500 model-ready rows |
 | 2026-10-02 | Ran the V1 unit tests | Completed | 10 passed |
-| Pending | Train the first baseline model | Not started | Outside the current scope |
-| Pending | Add SEC/Agentic AI features | Not started | After numerical baselines |
+| 2026-10-19 | Run exploratory ARIMA and XGBoost V1/V2/V3 baselines | Completed | Results are not a final aligned comparison; see `docs/project_scope_v2.md` |
+| 2026-10-20 | Implement aligned five-session targets, purged boundaries and ARIMA/XGBoost baselines | Completed | See `V1/docs/aligned_baselines_v2.md`; mean-price interpretation remains pending supervisor confirmation |
+| Pending | Select an Agentic AI source and implement the auditable prototype | Not started | Source decision follows RSS/FNSPID/SEC audit |
 
 ## 10. Reproducibility and Validation
 

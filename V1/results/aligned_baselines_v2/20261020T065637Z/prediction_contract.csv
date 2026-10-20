@@ -1,0 +1,5 @@
+model,forecast_origins,symbols,splits
+arima,2460,5,test;validation
+naive_last,2460,5,test;validation
+naive_zero,2460,5,test;validation
+xgboost,2460,5,test;validation

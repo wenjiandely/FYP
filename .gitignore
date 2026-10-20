@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+~$*
+/.chart-data-*/
+/tmp/
+/SP73_Data_2019_2025_share*.zip

@@ -1,5 +1,10 @@
 # Handling and Processing Time-Series Data using Agentic AI
 This is a final year project for NUSRI.
+
+## Current Experiment Definition
+
+The current project-level target and engineering plan are maintained in [`docs/project_scope_v2.md`](docs/project_scope_v2.md). The working target is a five-trading-session daily adjusted-close path forecast plus the mean of those five future adjusted closes; the exact meaning of “average” remains pending supervisor confirmation. The aligned ARIMA/XGBoost pipeline has been implemented and run; its corrected metrics and limitations are recorded in [`V1/docs/aligned_baselines_v2.md`](V1/docs/aligned_baselines_v2.md). Earlier one-day labels and mismatched model comparisons remain historical exploratory results.
+
 ## Project Aim
 
 The project broadly aims to:

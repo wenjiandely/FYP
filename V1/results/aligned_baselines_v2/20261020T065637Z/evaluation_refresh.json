@@ -1,0 +1,9 @@
+{
+  "original_predictions_sha256": "3caa5ee9d2133133933270c81523242c456128f5a71c27916169384ea04c93d8",
+  "latest_refresh_input_sha256": "2965c3a836fe27786eff16e0237f03839151f3e10d064bc81d40fe908f65e58d",
+  "refreshed_predictions_sha256": "2965c3a836fe27786eff16e0237f03839151f3e10d064bc81d40fe908f65e58d",
+  "method": "Preserve all five daily return forecasts; reconstruct prices and mean-price summaries with expm1 for stable zero-return scoring.",
+  "retrained": false,
+  "direction": "return > 0 versus return <= 0",
+  "majority_baseline": "Retrospective per-symbol/per-split class-balance diagnostic, not a test-fitted predictor."
+}

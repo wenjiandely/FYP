@@ -1,0 +1,34 @@
+{
+  "run_id": "20261020T065637Z",
+  "code_revision": "unknown",
+  "data_sha256": {
+    "market_data_v1.csv": "3118c84d3cb5d29ca20850f1754c1072a6efc13e2c1b0c3ec7e6b852edb89e57",
+    "features_v1.csv": "3d10dc579ec102067cc6ec8e6c92f0bbcbf61ee933982f3f7140b8b8a73d6572"
+  },
+  "symbols": [
+    "AAPL",
+    "NVDA",
+    "ORCL",
+    "QCOM",
+    "SPY"
+  ],
+  "target": "next five one-session adjusted-close log returns; reconstructed path and arithmetic mean price",
+  "split": {
+    "train": "2019-2023",
+    "validation": "2024",
+    "test": "2025",
+    "purge": "all five target sessions must remain within origin split"
+  },
+  "models": {
+    "arima": "per-symbol ARIMA(1,0,1), refit every 21 scored origins; refit checkpoints saved",
+    "xgboost": "pooled five direct regressors with one-hot symbol columns, refit every 63 scored market dates; all horizon checkpoints saved"
+  },
+  "xgboost_device": "cuda:0",
+  "seed": 42,
+  "fit_artifacts": "New aligned model checkpoints are saved under models/; legacy checkpoints are not reused.",
+  "rows": {
+    "target_rows": 8800,
+    "purged_origins": 75,
+    "eligible_complete_feature_rows": 8430
+  }
+}
